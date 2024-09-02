@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/chapitre_3_base_CSS/02_selector_class_id.css">
+  <title>Selector class et id</title>
+  <style>
+    h1{
+      color: aqua;
+    }
+
+    /* class */
+    .h1-red{
+      color: blueviolet;
+    }
+    .big-font{
+      font-size: 30px;
+    }
+    /* id */
+    #main-title p{
+      background: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1  class="h1-red">Hello World</h1>
+  <!-- div>p+div>h3{Je suis un h3} -->
+  <div id="main-title">
+    <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, eos.</p>
+    <div>
+      <h3 class="big-font">Je suis un h3</h3>
+    </div>
+  </div>
+  <p>Lorem ipsum dolor sit amet.</p>
+  <h1>Je suis un h1</h1>
+
+  <!-- Subtilités sur le combinateur enfant -->
+  <div>
+    <span
+      >Rouge
+      <p>Aussi rouge car dans le span sélectionné</p>
+    </span>
+    <p>
+      <span
+        >Match pas car pas descendant direct. Il y a un élément p entre les
+        deux.</span
+      >
+    </p>
+  </div>
+
+  <br />
+
+  <!-- Subtilités sur le combinateur enfant -->
+  <p>
+    <span>
+      <span>
+        <span>Test</span>
+      </span>
+    </span>
+  </p>
+
+  <!-- Observez la différence avec le combinateur descendant -->
+  <div class="test3">
+    <p>
+      <span
+        >Match car descendant indirect, même si il y a un élément p entre les
+        deux.</span
+      >
+    </p>
+  </div>
+
+  <!-- div>p*3 -->
+   <div>
+    <p></p>
+    <p></p>
+    <p></p>
+   </div>
+
+</body>
+
+</html>

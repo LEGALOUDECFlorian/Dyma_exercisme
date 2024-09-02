@@ -1,0 +1,11 @@
+div > span {
+  color: red;
+}
+
+p > span > span > span {
+  color: blue;
+}
+
+.test3 span {
+  color: purple;
+}
